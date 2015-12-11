@@ -6,22 +6,36 @@ The main idea is to help with installation of the complete desktop environment i
 ***
 
 The full max set up should contain:
+---
 All language packs for installed programs
+
 Media players
+
 Office programs including text editors
+
 Chatt programs
+
 Web browsers with a good support for online video/media (pepperflash/freshplayerplugin)
+
 Manage so many as possible compressed files
+
 All necessery componets for a fully functional visual desktop environment
 ( panel/tray/audio mixer+pulseaudio mixer in a tray/powermanager/time & date/language layout switcher )
+
 Update manager/Notifier
+
 Preset mime-types for default user
-*
+###
 Base set up should contain:
+---
 One or two of each from above
+
 Minimal lightweigth web browser and a big one
+
 Language packs only for english and user specified
+
 Office and text editor
+
 Only filemanager that has support for compressed files
 
 ***
@@ -35,7 +49,7 @@ Special features
 Official repository size and use of unofficial repositories if available
 Computer type or out-of-the-box driver support
 
-Best Regards
+Best Regards/
 Andy Crowd
 
 P.S.
