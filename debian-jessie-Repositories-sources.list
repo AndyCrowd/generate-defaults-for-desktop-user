@@ -1,0 +1,99 @@
+# #
+# # Warning!!! Repositories must be signed!!!!
+# # 
+# # It is only an EXAMPLE that you might need to modify! 
+# # It takes time to check every repository! Remove them that you will not need to use.
+# #
+
+# deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official i386 NETINST Binary-1 20150906-10:00]/ jessie main
+
+#deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official i386 NETINST Binary-1 20150906-10:00]/ jessie main
+
+deb http://ftp.se.debian.org/debian/ jessie main contrib non-free 
+deb-src http://ftp.se.debian.org/debian/ jessie main contrib non-free 
+
+deb http://security.debian.org/ jessie/updates main contrib non-free 
+deb-src http://security.debian.org/ jessie/updates main contrib non-free 
+
+# jessie-updates, previously known as 'volatile'
+deb http://ftp.se.debian.org/debian/ jessie-updates main contrib non-free 
+deb-src http://ftp.se.debian.org/debian/ jessie-updates main contrib non-free 
+
+deb http://ftp.debian.org/debian/ jessie-backports main
+
+#####
+deb https://deb.opera.com/opera-stable/ stable non-free
+deb http://download.skype.com/linux/repos/debian/ stable non-free
+deb http://download.virtualbox.org/virtualbox/debian jessie contrib non-free
+
+#### http://linuxoid.in/
+deb http://www.deb-multimedia.org jessie main non-free
+deb http://notesalexp.org/debian/jessie/ jessie main
+
+deb http://www.tataranovich.com/debian jessie main backports
+deb-src http://www.tataranovich.com/debian jessie main backports
+
+### google
+deb http://dl.google.com/linux/chrome/deb/ stable main
+deb http://dl.google.com/linux/earth/deb/ stable main
+deb http://dl.google.com/linux/talkplugin/deb/ stable main
+
+#deb http://dl.google.com/linux/deb/ stable non-free
+
+deb http://mozilla.debian.net/ jessie-backports iceweasel-release
+
+### IM/SIP messenger but also available in official
+deb http://download.jitsi.org/deb unstable/
+
+#### SIP related
+deb    http://ag-projects.com/debian stable main 
+
+####
+deb http://liquorix.net/debian sid main
+
+#### The Samsung Unified Linux Driver Repository
+deb http://www.bchemnet.com/suldr/ debian extra
+
+# PeerGuardian Linux block list
+deb http://moblock-deb.sourceforge.net/debian jessie main
+
+###
+deb http://download.bitdefender.com/repos/deb/ bitdefender non-free
+
+### 
+deb http://packages.dotdeb.org jessie all
+
+### Russian man pages
+deb http://manpages.ylsoftware.com/debian/ all main
+
+### fork KDE3, no support for jessie yet
+#deb http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/debian jessie main
+##deb-src http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/debian jessie main
+#deb http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/debian jessie main
+##deb-src http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/debian jessie  main
+
+#Emacs-snap
+deb http://londo.ganneff.de/ stable main
+
+##
+deb http://debian.scribus.net/debian/ stable main
+
+###
+deb ftp://cathbard.com/ ./
+
+###
+deb http://neurodebian.ovgu.de/debian data main contrib non-free
+#deb-src http://neurodebian.ovgu.de/debian data main contrib non-free
+deb http://neurodebian.ovgu.de/debian jessie main contrib non-free
+#deb-src http://neurodebian.ovgu.de/debian jessie main contrib non-free
+
+deb http://qgis.org/debian/ jessie main
+deb-src http://qgis.org/debian jessie main
+
+# Backports repository
+deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+### How to install backports: http://backports.debian.org/Instructions/
+
+###
+deb http://www.pvv.ntnu.no/~knuta/xmms/squeeze ./
+deb-src http://www.pvv.ntnu.no/~knuta/xmms/squeeze ./
