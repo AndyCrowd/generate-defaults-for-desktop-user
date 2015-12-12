@@ -1,0 +1,104 @@
+#!/bin/bash
+
+# # 
+# # Warning!!! Repositories must be registred and comment/comment out entries for your needs!!!
+# #
+
+
+####
+#### To list only file names: this_script | cut -d" " -f1
+#### To install use: apt-get install $(this_script)
+#### 
+
+#apt-cache search ^xfce  
+
+# System tools
+#apt-cache search ^gksu
+
+# Kernels
+## 32Bit
+##apt-cache search "linux-image" | grep -v -e pae -e amd
+## 64Bit (incl. nvidia)
+##apt-cache search "linux-image" | grep -v pae | grep amd64
+##Additional drivers
+##apt-cache search ^firmware | grep ^firmware
+
+## Printer related
+apt-cache search ^cups
+apt-cache search ^ghostscript
+apt-cache search ^system-config-printer
+
+#apt-cache search printer | grep driver
+
+###### Office related
+apt-cache search ^libreoffice-l
+apt-cache search ^iceweasel-l
+apt-cache search ^ttf
+apt-cache search ^myspell
+apt-cache search ^hunspell
+apt-cache search ^aspell
+apt-cache search ^ispell
+apt-cache search ^fonts-
+apt-cache search ^abiword
+apt-cache search ^calibre
+apt-cache search ^xpad
+apt-cache search ^calligra
+apt-cache search ^xsane
+apt-cache search ^gimp
+apt-cache search ^evince
+apt-cache search ^calibre
+
+### Web related
+#apt-cache search "web browser" | grep "web browser" | grep lightweight
+#apt-cache search "web browser" | grep "web browser" | grep minimal
+#apt-cache search "web browser" | grep "web browser" | grep small
+#apt-cache search ^"web browser"
+apt-cache search ^midori
+apt-cache search ^opera
+apt-cache search ^netsurf
+apt-cache search ^chromium
+
+### widget = kde plasma
+apt-cache search pulseaudio |grep -v widget | grep mix
+apt-cache search ^pavucontrol
+apt-cache search ^alsamixergui 
+apt-cache search ^volumeicon-alsa
+
+#apt-get remove flashplugin-nonfree flashplugin-nonfree-extrasound  flashplayer-mozilla
+
+### All web browsers
+##apt-cache search "web browser" | grep -i "web browser" | grep -v -e dbg -e dev -e API -e debug -e usage -e perl -e python -e data -e php -e man -e library -e plugin -e extension -e beta -e unstable -e client -e control
+
+apt-cache search ^xarchiver
+apt-cache search ^p7zip
+apt-cache search ^vlc
+apt-cache search ^smplayer
+
+apt-cache search ^youtube
+apt-cache search ^xmms | grep -v library
+apt-cache search ^audacious
+
+apt-cache search ^audacity
+
+apt-cache search ^brasero
+apt-cache search ^lxmusic
+
+apt-cache search ^inkscape
+
+apt-cache search ^pidgin
+apt-cache search ^empathy
+
+apt-cache search ^xchat
+
+apt-cache search ^pinta
+
+# FreshPlayer plugin
+# aptitude -t jessie-backports install browser-plugin-freshplayer-pepperflash
+
+# Torrent
+#apt-cache search ^transmission | grep -v python
+
+## NOT working  install XMMS not xmms2
+## NOT working  apt-cache search ^libmikmod
+### 
+#sudo aptitude install fakeroot automake  build-essential
