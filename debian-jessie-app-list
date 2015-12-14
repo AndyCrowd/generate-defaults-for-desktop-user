@@ -31,7 +31,8 @@ apt-cache search ^system-config-printer
 ###### Office related
 apt-cache search ^libreoffice-l
 apt-cache search ^abiword
-apt-cache search ^calligra
+#KDE calligra
+#apt-cache search ^calligra
 apt-cache search ^inkscape
 # Notes
 apt-cache search ^xpad
