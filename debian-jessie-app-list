@@ -1,5 +1,10 @@
 #!/bin/bash
 
+### !!! Edit after your needs
+### !!! To save place use: sh -e this_script|cut -d" " -f1 |grep -v -e "\-dbg"$ -e "\-dev"$| uniq
+### !!! apt-get install $(command_from_above)
+### !!! Manually copy commands for backports and use after this script is done
+
 #apt-cache search ^xfce  
 
 ## Video drivers 
