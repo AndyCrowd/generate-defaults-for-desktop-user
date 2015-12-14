@@ -37,22 +37,22 @@ apt-cache search ^inkscape
 apt-cache search ^xpad
 # Image edit
 apt-cache search ^pinta
-apt-cache search ^gimp
+apt-cache search ^gimp &| grep -v gimp-ufraw
 
 # Fonts
 apt-cache search ^ttf
 apt-cache search ^fonts-
 
 # Spelling/Dictionary
-apt-cache search ^myspell
-apt-cache search ^hunspell
+#apt-cache search ^myspell
+apt-cache search ^hunspell &| grep -v -e "\-frami"$  -e "comprehensive" -e "modern" -e "revised" -e "myspell"
 apt-cache search ^aspell
-apt-cache search ^ispell
+apt-cache search ^ispell &| grep -v gut$
 
 # Viewers
 apt-cache search ^calibre
 apt-cache search ^xsane
-apt-cache search ^evince
+apt-cache search ^evince | grep -v gtk
 apt-cache search ^calibre
 apt-cache search ^ristretto
 apt-cache search ^w-scan
@@ -89,13 +89,13 @@ apt-cache search ^smplayer
 apt-cache search ^xine | grep -v inetd
 apt-cache search ^parole
 apt-cache search ^youtube
-apt-cache search ^xmms | grep -v library
+apt-cache search ^xmms2 | grep -v library
 apt-cache search ^audacious
 apt-cache search ^audacity
 apt-cache search ^lxmusic
 # Codecs
-sudo apt-get install $(apt-cache search ^icedtea | cut -d" " -f1)
-sudo apt-get install $(apt-cache search ^gstreamer | cut -d" " -f1 | grep "\-plugins" | grep -v -e dbg -e doc -e dev)
+apt-cache search ^icedtea | cut -d" " -f1
+apt-cache search ^gstreamer | cut -d" " -f1 | grep "\-plugins"
 
 # Burn disk
 apt-cache search ^brasero
