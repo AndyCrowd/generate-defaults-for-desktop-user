@@ -1,25 +1,18 @@
 #!/bin/bash
 
-# # 
-# # Warning!!! Repositories must be registred and comment/comment out entries for your needs!!!
-# #
-
-
-####
-#### To list only file names: this_script | cut -d" " -f1
-#### To install use: apt-get install $(this_script)
-#### 
-
 #apt-cache search ^xfce  
+
+## Video drivers 
+apt-cache search ^xserver-xorg-video | grep -v -e video-nvidia -e non-free
 
 # System tools
 #apt-cache search ^gksu
 
 # Kernels
 ## 32Bit
-##apt-cache search "linux-image" | grep -v -e pae -e amd
-## 64Bit (incl. nvidia)
-##apt-cache search "linux-image" | grep -v pae | grep amd64
+##apt-cache search "linux-image" | grep -v -e pae -e amd -e nvidia
+## 64Bit 
+##apt-cache search "linux-image" | grep -v -e pae -e nvidia  | grep amd64
 ##Additional drivers
 ##apt-cache search ^firmware | grep ^firmware
 
@@ -32,21 +25,32 @@ apt-cache search ^system-config-printer
 
 ###### Office related
 apt-cache search ^libreoffice-l
-apt-cache search ^iceweasel-l
+apt-cache search ^abiword
+apt-cache search ^calligra
+apt-cache search ^inkscape
+# Notes
+apt-cache search ^xpad
+# Image edit
+apt-cache search ^pinta
+apt-cache search ^gimp
+
+# Fonts
 apt-cache search ^ttf
+apt-cache search ^fonts-
+
+# Spelling/Dictionary
 apt-cache search ^myspell
 apt-cache search ^hunspell
 apt-cache search ^aspell
 apt-cache search ^ispell
-apt-cache search ^fonts-
-apt-cache search ^abiword
+
+# Viewers
 apt-cache search ^calibre
-apt-cache search ^xpad
-apt-cache search ^calligra
 apt-cache search ^xsane
-apt-cache search ^gimp
 apt-cache search ^evince
 apt-cache search ^calibre
+apt-cache search ^ristretto
+apt-cache search ^w-scan
 
 ### Web related
 #apt-cache search "web browser" | grep "web browser" | grep lightweight
@@ -57,6 +61,7 @@ apt-cache search ^midori
 apt-cache search ^opera
 apt-cache search ^netsurf
 apt-cache search ^chromium
+apt-cache search ^iceweasel-l
 
 ### widget = kde plasma
 apt-cache search pulseaudio |grep -v widget | grep mix
@@ -69,34 +74,42 @@ apt-cache search ^volumeicon-alsa
 ### All web browsers
 ##apt-cache search "web browser" | grep -i "web browser" | grep -v -e dbg -e dev -e API -e debug -e usage -e perl -e python -e data -e php -e man -e library -e plugin -e extension -e beta -e unstable -e client -e control
 
+#Archives/(de)compression
 apt-cache search ^xarchiver
 apt-cache search ^p7zip
+
+#Media
 apt-cache search ^vlc
 apt-cache search ^smplayer
-
+apt-cache search ^xine | grep -v inetd
+apt-cache search ^parole
 apt-cache search ^youtube
 apt-cache search ^xmms | grep -v library
 apt-cache search ^audacious
-
 apt-cache search ^audacity
-
-apt-cache search ^brasero
 apt-cache search ^lxmusic
+# Codecs
+sudo apt-get install $(apt-cache search ^icedtea | cut -d" " -f1)
+sudo apt-get install $(apt-cache search ^gstreamer | cut -d" " -f1 | grep "\-plugins" | grep -v -e dbg -e doc -e dev)
 
-apt-cache search ^inkscape
-
+# Burn disk
+apt-cache search ^brasero
+apt-cache search ^pinta
+apt-cache search ^xfburn
+# Chat
 apt-cache search ^pidgin
 apt-cache search ^empathy
-
 apt-cache search ^xchat
 
-apt-cache search ^pinta
+apt-cache search ^skype | grep ^skype
+
+
+# Torrent
+#apt-cache search ^transmission | grep -v python
 
 # FreshPlayer plugin
 # aptitude -t jessie-backports install browser-plugin-freshplayer-pepperflash
 
-# Torrent
-#apt-cache search ^transmission | grep -v python
 
 ## NOT working  install XMMS not xmms2
 ## NOT working  apt-cache search ^libmikmod
