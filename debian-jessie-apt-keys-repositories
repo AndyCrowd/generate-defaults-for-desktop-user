@@ -1,81 +1,102 @@
-#!/bin/bash
+# #
+# # Warning!!! Repositories must be signed!!!!
+# # 
+# # It is only an EXAMPLE that you might need to modify! 
+# # It takes time to check every repository! Remove them that you will not need to use.
+# #
+## Must be installed
+### apt-transport-https
 
-aptitude update
-apt-get dist-upgrade
+# deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official i386 NETINST Binary-1 20150906-10:00]/ jessie main
+# deb cdrom:[Debian GNU/Linux 8.2.0 _Jessie_ - Official i386 NETINST Binary-1 20150906-10:00]/ jessie main
 
-wget -qO- https://deb.opera.com/archive.key |  apt-key add -
-dpkg --add-architecture i386
+deb http://ftp.se.debian.org/debian/ jessie main contrib non-free 
+deb-src http://ftp.se.debian.org/debian/ jessie main contrib non-free 
 
-wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- |  apt-key add -
+deb http://security.debian.org/ jessie/updates main contrib non-free 
+deb-src http://security.debian.org/ jessie/updates main contrib non-free 
 
-#aptitude install pepperflashplugin-nonfree browser-plugin-freshplayer-pepperflash
-#apt install browser-plugin-freshplayer-pepperflash
-#apt-get install apt-transport-https
+# jessie-updates, previously known as 'volatile'
+deb http://ftp.se.debian.org/debian/ jessie-updates main contrib non-free 
+deb-src http://ftp.se.debian.org/debian/ jessie-updates main contrib non-free 
 
-#Skype
-aptitude install libc6:i386 libqt4-dbus:i386 libqt4-network:i386 libqt4-xml:i386 libqtcore4:i386 libqtgui4:i386 libqtwebkit4:i386 libstdc++6:i386 libx11-6:i386 libxext6:i386 libxss1:i386 libxv1:i386 libssl1.0.0:i386 libpulse0:i386 libasound2-plugins:i386
-apt-get install libxcursor1:i386
-###
+deb http://ftp.debian.org/debian/ jessie-backports main
 
-wget -O - http://web.archive.org/web/20070117230510/http://www.skype.com/products/skype/linux/rpm-public-key.asc | apt-key add -
-apt-get install skype
+# Backports repository
+deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+### How to install backports: http://backports.debian.org/Instructions/
 
-wget -O - http://notesalexp.org/debian/alexp_key.asc |  apt-key add -
-wget -O - http://www.tataranovich.com/tataranovich.asc |  apt-key add -
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 836CC41976FB442E
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv C697D823EB0AB654
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub |  apt-key add -
+#####
+deb https://deb.opera.com/opera-stable/ stable non-free
+deb http://download.skype.com/linux/repos/debian/ stable non-free
+deb http://download.virtualbox.org/virtualbox/debian jessie contrib non-free
 
-#### apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EAF9B4E3C0145138
+#### http://linuxoid.in/
+#deb http://www.deb-multimedia.org jessie main non-free
+#deb http://notesalexp.org/debian/jessie/ jessie main
+
+#deb http://www.tataranovich.com/debian jessie main backports
+#deb-src http://www.tataranovich.com/debian jessie main backports
+
+### google
+deb http://dl.google.com/linux/chrome/deb/ stable main
+deb http://dl.google.com/linux/earth/deb/ stable main
+deb http://dl.google.com/linux/talkplugin/deb/ stable main
+#deb http://dl.google.com/linux/deb/ stable non-free
+
+#deb http://mozilla.debian.net/ jessie-backports iceweasel-release
+
+### IM/SIP messenger but also available in official
+#deb http://download.jitsi.org/deb unstable/
+
+#### SIP related
+#deb    http://ag-projects.com/debian stable main 
+
+#### Liquorix is a distro kernel replacement built using the best configuration and kernel sources for desktop, multimedia, and gaming workloads.
+#deb http://liquorix.net/debian sid main
+
+#### The Samsung Unified Linux Driver Repository
+deb http://www.bchemnet.com/suldr/ debian extra
+
+# PeerGuardian Linux block list
+deb http://moblock-deb.sourceforge.net/debian jessie main
+
+### Out of date AntiVirus
+#deb http://download.bitdefender.com/repos/deb/ bitdefender non-free
+
+### Dotdeb is an extra repository providing up-to-date packages for your Debian servers
+#deb http://packages.dotdeb.org jessie all
+
+### Russian man pages
+deb http://manpages.ylsoftware.com/debian/ all main
+
+### fork KDE3, no support for jessie yet
+#deb http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/debian jessie main
+##deb-src http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/debian jessie main
+#deb http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/debian jessie main
+##deb-src http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/debian jessie  main
+
+#Emacs-snap
+#deb http://londo.ganneff.de/ stable main
+
+## Scribus, a page layout program
+## deb http://debian.scribus.net/debian/ stable main
+
+### Cathbard's GNU/Linux desktop art, cartoons and unique guitar amplifiers 
+#deb ftp://cathbard.com/ ./
+
+### NeuroDebian is a community effort to provide a fully-integrated computational environment for neuroscience research.
+#deb http://neurodebian.ovgu.de/debian data main contrib non-free
+##deb-src http://neurodebian.ovgu.de/debian data main contrib non-free
+#deb http://neurodebian.ovgu.de/debian jessie main contrib non-free
+##deb-src http://neurodebian.ovgu.de/debian jessie main contrib non-free
+
+## A Free and Open Source Geographic Information System
+#deb http://qgis.org/debian/ jessie main
+#deb-src http://qgis.org/debian jessie main
 
 
-##### 
+### XMMS ......
+#deb http://www.pvv.ntnu.no/~knuta/xmms/squeeze ./
+#deb-src http://www.pvv.ntnu.no/~knuta/xmms/squeeze ./
 
-#apt-get install debian-keyring
-#wget -O- -q http://mozilla.debian.net/archive.asc | apt-key add -
-##wget -O- -q http://mozilla.debian.net/archive.asc | gpg --import
-##gpg --check-sigs --fingerprint --keyring /usr/share/keyrings/debian-keyring.gpg 06C4AE2A
-##gpg --export -a 06C4AE2A |  apt-key add -
-
-####
-
-wget -q -O - http://download.ag-projects.com/agp-debian-gpg.key | apt-key add -
-
-#########
-#"Debian kernel built on top of the zen kernel sources. The configuration is optimized for a practical desktop experience and features not currently maintained in Linus's mainline kernel are included." 
-#apt-get update && apt-get install '^liquorix-([^-]+-)?keyring.?'
-
-########
-
-wget -O - http://www.bchemnet.com/suldr/suldr.gpg | apt-key add -
-
-####
-
-#gpg --keyserver wwwkeys.eu.pgp.net --recv 9072870B
-#gpg --export --armor 9072870B |  apt-key add -
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EAF9B4E3C0145138
-
-wget -q  -O - http://download.bitdefender.com/repos/deb/bd.key.asc| apt-key add -
-
-#wget http://www.dotdeb.org/dotdeb.gpg
-#apt-key add dotdeb.gpg
-wget -q -O -  http://www.dotdeb.org/dotdeb.gpg |  apt-key add -
-
-apt-key adv --keyserver keyserver.quickbuild.pearsoncomputing.net --recv-keys 2B8638D0
-
-wget -q -O - http://londo.ganneff.de/apt.key | apt-key add -
-
-#wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | apt-key add -
-
-#problem with server connect
-#gpg --keyserver wwwkeys.pgp.net --recv-keys EEF818CF
-#gpg --armor --export EEF818CF |  apt-key add -
-
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 5BC4CFB8EEF818CF
-#apt-get install scribus-archive-keyring
-
-#apt-get update && apt-get install cathbard-keyring
-apt-key adv --recv-keys --keyserver hkp://pgp.mit.edu:80 0xA5D32F012649A5A9
-
-#QGIS
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 3FF5FFCAD71472C4
