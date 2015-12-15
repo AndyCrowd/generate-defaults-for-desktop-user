@@ -31,8 +31,8 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub |  apt-key ad
 
 ##### 
 
-apt-get install debian-keyring
-wget -O- -q http://mozilla.debian.net/archive.asc | apt-key add -
+#apt-get install debian-keyring
+#wget -O- -q http://mozilla.debian.net/archive.asc | apt-key add -
 ##wget -O- -q http://mozilla.debian.net/archive.asc | gpg --import
 ##gpg --check-sigs --fingerprint --keyring /usr/share/keyrings/debian-keyring.gpg 06C4AE2A
 ##gpg --export -a 06C4AE2A |  apt-key add -
@@ -43,7 +43,7 @@ wget -q -O - http://download.ag-projects.com/agp-debian-gpg.key | apt-key add -
 
 #########
 #"Debian kernel built on top of the zen kernel sources. The configuration is optimized for a practical desktop experience and features not currently maintained in Linus's mainline kernel are included." 
-apt-get update && apt-get install '^liquorix-([^-]+-)?keyring.?'
+#apt-get update && apt-get install '^liquorix-([^-]+-)?keyring.?'
 
 ########
 
@@ -72,9 +72,9 @@ wget -q -O - http://londo.ganneff.de/apt.key | apt-key add -
 #gpg --armor --export EEF818CF |  apt-key add -
 
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 5BC4CFB8EEF818CF
-apt-get install scribus-archive-keyring
+#apt-get install scribus-archive-keyring
 
-apt-get update && apt-get install cathbard-keyring
+#apt-get update && apt-get install cathbard-keyring
 apt-key adv --recv-keys --keyserver hkp://pgp.mit.edu:80 0xA5D32F012649A5A9
 
 #QGIS
