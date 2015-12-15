@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ### !!! Edit after your needs
-### !!! To save place use: sh -e this_script|cut -d" " -f1 |grep -v -e "\-dbg"$ -e "\-dev"$| uniq
+### !!! To save place use: sh -e this_script|cut -d" " -f1 |& grep -v -e "\-dbg"$ -e "\-dev"$| uniq
 ### !!! apt-get install $(command_from_above)
 ### !!! Manually copy commands for backports and use after this script is done
 
 #apt-cache search ^xfce  
 
 ## Video drivers 
-apt-cache search ^xserver-xorg-video | grep -v -e video-nvidia -e non-free
+apt-cache search ^xserver-xorg-video |& grep -v -e video-nvidia -e non-free
 
 # System tools
 #apt-cache search ^gksu
@@ -26,7 +26,7 @@ apt-cache search ^cups
 apt-cache search ^ghostscript
 apt-cache search ^system-config-printer
 
-#apt-cache search printer | grep driver
+#apt-cache search printer |& grep driver
 
 ###### Office related
 apt-cache search ^libreoffice-l
@@ -38,7 +38,7 @@ apt-cache search ^inkscape
 apt-cache search ^xpad
 # Image edit
 apt-cache search ^pinta
-apt-cache search ^gimp &| grep -v gimp-ufraw
+apt-cache search ^gimp |& grep -v gimp-ufraw
 
 # Fonts
 apt-cache search ^ttf
@@ -46,22 +46,23 @@ apt-cache search ^fonts-
 
 # Spelling/Dictionary
 #apt-cache search ^myspell
-apt-cache search ^hunspell &| grep -v -e "\-frami"$  -e "comprehensive" -e "modern" -e "revised" -e "myspell"
+#apt-cache search ^hunspell |& grep -v -e "frami"$  -e "comprehensive" -e "modern" -e "revised" -e "myspell"
+apt-cache search ^hunspell |& grep -v -e frami -e comprehensive -e revised -e modern -e classical -e myspell
 apt-cache search ^aspell
-apt-cache search ^ispell &| grep -v gut$
+apt-cache search ^ispell |& grep -v -e gut
 
 # Viewers
 apt-cache search ^calibre
 apt-cache search ^xsane
-apt-cache search ^evince | grep -v gtk
+apt-cache search ^evince |& grep -v gtk
 apt-cache search ^calibre
 apt-cache search ^ristretto
 apt-cache search ^w-scan
 
 ### Web related
-#apt-cache search "web browser" | grep "web browser" | grep lightweight
-#apt-cache search "web browser" | grep "web browser" | grep minimal
-#apt-cache search "web browser" | grep "web browser" | grep small
+#apt-cache search "web browser" |& grep "web browser" |& grep lightweight
+#apt-cache search "web browser" |& grep "web browser" |& grep minimal
+#apt-cache search "web browser" |& grep "web browser" |& grep small
 #apt-cache search ^"web browser"
 apt-cache search ^midori
 apt-cache search ^opera
@@ -70,7 +71,7 @@ apt-cache search ^chromium
 apt-cache search ^iceweasel-l
 
 ### widget = kde plasma
-apt-cache search pulseaudio |grep -v widget | grep mix
+apt-cache search pulseaudio |& grep -v widget |& grep mix
 apt-cache search ^pavucontrol
 apt-cache search ^alsamixergui 
 apt-cache search ^volumeicon-alsa
@@ -78,7 +79,7 @@ apt-cache search ^volumeicon-alsa
 #apt-get remove flashplugin-nonfree flashplugin-nonfree-extrasound  flashplayer-mozilla
 
 ### All web browsers
-##apt-cache search "web browser" | grep -i "web browser" | grep -v -e dbg -e dev -e API -e debug -e usage -e perl -e python -e data -e php -e man -e library -e plugin -e extension -e beta -e unstable -e client -e control
+##apt-cache search "web browser" |& grep -i "web browser" | grep -v -e dbg -e dev -e API -e debug -e usage -e perl -e python -e data -e php -e man -e library -e plugin -e extension -e beta -e unstable -e client -e control
 
 #Archives/(de)compression
 apt-cache search ^xarchiver
@@ -87,16 +88,16 @@ apt-cache search ^p7zip
 #Media
 apt-cache search ^vlc
 apt-cache search ^smplayer
-apt-cache search ^xine | grep -v inetd
+apt-cache search ^xine |& grep -v inetd
 apt-cache search ^parole
 apt-cache search ^youtube
-apt-cache search ^xmms2 | grep -v library
+apt-cache search ^xmms2 |& grep -v library
 apt-cache search ^audacious
 apt-cache search ^audacity
 apt-cache search ^lxmusic
 # Codecs
-apt-cache search ^icedtea | cut -d" " -f1
-apt-cache search ^gstreamer | cut -d" " -f1 | grep "\-plugins"
+apt-cache search ^icedtea 
+apt-cache search ^gstreamer |& grep "\-plugins"
 
 # Burn disk
 apt-cache search ^brasero
