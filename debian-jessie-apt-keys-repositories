@@ -26,6 +26,10 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 836CC41976FB442E
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv C697D823EB0AB654
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub |  apt-key add -
 
+## PeerGuardian Linux
+gpg --keyserver keyserver.ubuntu.com --recv-keys C0145138
+gpg --export --armor C0145138 | sudo apt-key add -
+
 #### apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EAF9B4E3C0145138
 
 
