@@ -18,7 +18,7 @@ apt-get install libxcursor1:i386
 ###
 
 wget -O - http://web.archive.org/web/20070117230510/http://www.skype.com/products/skype/linux/rpm-public-key.asc | apt-key add -
-apt-get install skype
+#apt-get install skype
 
 wget -O - http://notesalexp.org/debian/alexp_key.asc |  apt-key add -
 wget -O - http://www.tataranovich.com/tataranovich.asc |  apt-key add -
