@@ -120,7 +120,9 @@ apt-cache search ^skype |& grep ^skype
 apt-cache search transmission-gtk
 #apt-cache search ^transmission |& grep -v python
 
-# FreshPlayer plugin
+# FreshPlayer plugin, PPAPI-host NPAPI-plugin adapter for pepperflash
+# Makes pepper flash (Adobe flash) works in firefox
+#apt-cache search browser-plugin-freshplayer-pepperflash
 # aptitude -t jessie-backports install browser-plugin-freshplayer-pepperflash
 
 
