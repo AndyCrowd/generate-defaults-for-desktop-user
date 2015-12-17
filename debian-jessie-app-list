@@ -5,7 +5,12 @@
 ### !!! apt-get install $(command_from_above)
 ### !!! Manually copy commands for backports and use after this script is done
 
+### Only for lightweight and GTK desktops such as XFCE. LXDE
 #apt-cache search ^xfce  
+#apt-cache search ^lxde
+
+# For autoupdate 
+apt-cache search ^update-notifier
 
 ## Video drivers 
 apt-cache search ^xserver-xorg-video |& grep -v -e video-nvidia -e non-free
@@ -108,11 +113,12 @@ apt-cache search ^pidgin
 apt-cache search ^empathy
 apt-cache search ^xchat
 
-apt-cache search ^skype | grep ^skype
+apt-cache search ^skype |& grep ^skype
 
 
 # Torrent
-#apt-cache search ^transmission | grep -v python
+apt-cache search transmission-gtk
+#apt-cache search ^transmission |& grep -v python
 
 # FreshPlayer plugin
 # aptitude -t jessie-backports install browser-plugin-freshplayer-pepperflash
