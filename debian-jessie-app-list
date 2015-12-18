@@ -16,6 +16,9 @@
 # For autoupdate 
 apt-cache search ^pk-update-icon
 apt-cache search ^update-notifier
+# http://blog.tenstral.net/2015/09/update-notifications-in-debian-jessie.html
+# Open dconf-editor and navigate to org.gnome.settings-daemon.plugins.updates. Check if the key active is set to true.
+apt-cache search ^dconf-editor
 
 ## Video drivers 
 apt-cache search ^xserver-xorg-video |& grep -v -e video-nvidia -e non-free
