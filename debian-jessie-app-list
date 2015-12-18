@@ -9,6 +9,10 @@
 #apt-cache search ^xfce  
 #apt-cache search ^lxde
 
+## Remove old flash player
+#apt-get remove flashplugin-nonfree flashplugin-nonfree-extrasound  flashplayer-mozilla
+#dpkg --remove flashplugin-nonfree
+
 # For autoupdate 
 apt-cache search ^update-notifier
 
@@ -81,8 +85,6 @@ apt-cache search ^pavucontrol
 apt-cache search ^alsamixergui 
 apt-cache search ^volumeicon-alsa
 
-#apt-get remove flashplugin-nonfree flashplugin-nonfree-extrasound  flashplayer-mozilla
-
 ### All web browsers
 ##apt-cache search "web browser" |& grep -i "web browser" | grep -v -e dbg -e dev -e API -e debug -e usage -e perl -e python -e data -e php -e man -e library -e plugin -e extension -e beta -e unstable -e client -e control
 
@@ -122,6 +124,7 @@ apt-cache search transmission-gtk
 
 # FreshPlayer plugin, PPAPI-host NPAPI-plugin adapter for pepperflash
 # Makes pepper flash (Adobe flash) works in firefox
+apt-cache search browser-plugin-freshplayer
 #apt-cache search browser-plugin-freshplayer-pepperflash
 # aptitude -t jessie-backports install browser-plugin-freshplayer-pepperflash
 
