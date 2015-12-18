@@ -14,6 +14,7 @@
 #dpkg --remove flashplugin-nonfree
 
 # For autoupdate 
+apt-cache search ^pk-update-icon
 apt-cache search ^update-notifier
 
 ## Video drivers 
@@ -52,6 +53,7 @@ apt-cache search ^gimp |& grep -v gimp-ufraw
 # Fonts
 apt-cache search ^ttf
 apt-cache search ^fonts-
+apt-cache search ^xfonts |& grep -v "Window Maker"
 
 # Spelling/Dictionary
 #apt-cache search ^myspell
