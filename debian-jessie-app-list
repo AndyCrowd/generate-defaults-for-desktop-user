@@ -78,6 +78,7 @@ apt-cache search ^opera
 apt-cache search ^netsurf
 apt-cache search ^chromium
 apt-cache search ^iceweasel-l
+apt-cache search ^google-chrome-stable
 
 ### widget = kde plasma
 apt-cache search pulseaudio |& grep -v widget |& grep mix
