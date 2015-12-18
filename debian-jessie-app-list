@@ -69,7 +69,6 @@ apt-cache search ^ispell |& grep -v -e gut
 apt-cache search ^calibre
 apt-cache search ^xsane
 apt-cache search ^evince |& grep -v gtk
-apt-cache search ^calibre
 apt-cache search ^ristretto
 apt-cache search ^w-scan
 
