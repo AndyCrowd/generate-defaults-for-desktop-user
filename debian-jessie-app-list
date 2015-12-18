@@ -57,6 +57,9 @@ apt-cache search ^gimp |& grep -v gimp-ufraw
 apt-cache search ^ttf
 apt-cache search ^fonts-
 apt-cache search ^xfonts |& grep -v "Window Maker"
+### Fonts for printer PostScript, GhostScript, CUPS
+apt-cache search ^gsfonts
+apt-cache search ^t1-
 
 # Spelling/Dictionary
 #apt-cache search ^myspell
@@ -98,6 +101,7 @@ apt-cache search ^xarchiver
 apt-cache search ^p7zip
 
 #Media
+apt-cache search ^gmerlin
 apt-cache search ^vlc
 apt-cache search ^smplayer
 apt-cache search ^xine |& grep -v inetd
@@ -110,6 +114,8 @@ apt-cache search ^lxmusic
 # Codecs
 apt-cache search ^icedtea 
 apt-cache search ^gstreamer |& grep "\-plugins"
+## ffmpegthumbs is KDE/QT related package
+apt-cache search ^ffmpeg |& grep ^ffmpeg |& grep -v ffmpegthumbs 
 
 # Burn disk
 apt-cache search ^brasero
