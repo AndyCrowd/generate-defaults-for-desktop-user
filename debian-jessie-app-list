@@ -76,7 +76,7 @@ apt-cache search ^w-scan
 #apt-cache search "web browser" |& grep "web browser" |& grep small
 #apt-cache search ^"web browser"
 apt-cache search ^midori
-apt-cache search ^opera
+apt-cache search ^opera | grep ^opera | grep -v -e develop -e next -e beta
 apt-cache search ^netsurf
 apt-cache search ^chromium
 apt-cache search ^iceweasel-l
