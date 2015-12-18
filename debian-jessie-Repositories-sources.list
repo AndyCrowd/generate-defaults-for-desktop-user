@@ -37,7 +37,7 @@ deb http://download.virtualbox.org/virtualbox/debian jessie contrib non-free
 #deb-src http://www.tataranovich.com/debian jessie main backports
 
 ### google
-deb http://dl.google.com/linux/chrome/deb/ stable main
+#deb http://dl.google.com/linux/chrome/deb/ stable main
 deb http://dl.google.com/linux/earth/deb/ stable main
 deb http://dl.google.com/linux/talkplugin/deb/ stable main
 #deb http://dl.google.com/linux/deb/ stable non-free
