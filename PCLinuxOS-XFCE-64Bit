@@ -21,7 +21,7 @@ if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then
   apt-cache search ^opera | grep -v python
   apt-cache search ^google-chrome
   apt-cache search ^inkscape
-    apt-cache search ^fonts-
+  apt-cache search ^fonts-
   apt-cache search ^x11-font
   apt-cache search ^google-cros
   apt-cache search ^cups$
@@ -29,4 +29,8 @@ if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then
   apt-cache search printer | grep driver
   apt-cache search ^system-config-printer
   apt-cache search ^ghostscript
+  apt-cache search ^abiword
+  apt-cache search ^xarchive
+  apt-cache search 7zip | grep -v util
+  apt-cache search ^wicd
 fi
