@@ -33,4 +33,4 @@ if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then
   apt-cache search ^xarchive
   apt-cache search 7zip | grep -v util
   apt-cache search ^wicd
-fi
+fi | grep -v -e \-dbg -e \-dev -e \-doc
