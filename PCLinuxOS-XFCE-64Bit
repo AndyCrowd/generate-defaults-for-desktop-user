@@ -33,4 +33,8 @@ if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then
   apt-cache search ^xarchive
   apt-cache search 7zip | grep -v util
   apt-cache search ^wicd
+  apt-cache search ^smtube
+  apt-cache search ^smplayer | grep -v qt4
+  apt-cache search ^vlc$
+  apt-cache search ^vlc | grep plugin
 fi | grep -v -e \-dbg -e \-dev -e \-doc -e \-legacy
