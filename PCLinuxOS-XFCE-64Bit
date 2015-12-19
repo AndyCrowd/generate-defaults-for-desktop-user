@@ -3,14 +3,14 @@
 ##
 ## !!! Never use upgrade option with apt-get !!!
 ## 
-## To separate description from package name use: cut -d" " -f1
+## To separate description from package name use: |& grep \- | cut -d" " -f1
 ##
+apt-get update
 if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then 
   echo ERROR no '"'fresh-player-plugin'" !!!'
   echo Uncomment mirror from EU or add one that contains '"'fresh-player-plugin'"'
   exit 1
  else
-  apt-get update
   apt-get dist-upgrade
   apt-cache search firmware | grep -v kernel
   apt-cache search ^x11-driver-video | grep -v proprietary
