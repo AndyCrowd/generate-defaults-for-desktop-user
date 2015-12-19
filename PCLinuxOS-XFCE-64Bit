@@ -1,0 +1,32 @@
+#!/bin/bash
+
+##
+## !!! Never use upgrade option with apt-get !!!
+## 
+## To separate description from package name use: cut -d" " -f1
+##
+if [[ -z "$(apt-cache search fresh-player-plugin)" ]];then 
+  echo ERROR no '"'fresh-player-plugin'" !!!'
+  echo Uncomment mirror from EU or add one that contains '"'fresh-player-plugin'"'
+  exit 1
+ else
+  apt-get update
+  apt-get dist-upgrade
+  apt-cache search firmware | grep -v kernel
+  apt-cache search ^x11-driver-video | grep -v proprietary
+  apt-cache search ^firefox
+  apt-cache search ^viber
+  apt-cache search ^skype | grep -v kde
+  apt-cache search ^midori
+  apt-cache search ^opera | grep -v python
+  apt-cache search ^google-chrome
+  apt-cache search ^inkscape
+    apt-cache search ^fonts-
+  apt-cache search ^x11-font
+  apt-cache search ^google-cros
+  apt-cache search ^cups$
+# apt-cache search ^cups-
+  apt-cache search printer | grep driver
+  apt-cache search ^system-config-printer
+  apt-cache search ^ghostscript
+fi
